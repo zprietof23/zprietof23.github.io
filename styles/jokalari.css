@@ -1,0 +1,125 @@
+:root {
+  /* Koloreak Dark Moderako eta zure eskakizunetarako egokitu dira */
+  --primary-color: #b9b9b9; /* Goiburua/Orri-oina (Gris argiagoa) */
+  --secondary-color: #0fa541; /* Berde distiratsua (Akzentua/Botoiak) */
+  --text-color: #ffffff; /* Testuaren kolorea argia */
+  --light-color: #414141; /* Elementu argien atzealdea (Gris iluna) */
+  --bg-color: #212121; /* Orriaren atzealde nagusia iluna */
+}
+/* Goiburua eta Nabigazioa */
+nav a {
+    color: var(--bg-color);
+    padding: 10px 15px;
+    display: block;
+}
+
+nav a:hover {
+    background-color: #333333;
+    color: var(--secondary-color);
+}
+
+.HurrengoTaldea {
+    color: var(--bg-color);
+    padding: 10px 15px;
+    display: block;
+    list-style: none;
+    text-decoration: none;
+}
+
+.HurrengoTaldea:hover {
+    background-color: #333333;
+    color: var(--secondary-color);
+    list-style: none;
+    
+} 
+
+.AtzekoTaldea{ 
+   color: var(--bg-color);
+    padding: 10px 15px;
+    display: block;
+    list-style: none;
+    text-decoration: none;
+}
+
+.AtzekoTaldea:hover{ 
+    background-color: #333333;
+    color: var(--secondary-color);
+    list-style: none;
+}
+
+.Jokalariak {
+    display: flex;
+    justify-content: center;
+    gap: 180px;
+   
+}
+
+.Jokalaria1 { 
+  position:relative; 
+  display: inline-block;
+}
+
+.Jokalaria1 .info{ 
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  opacity: 4;
+  text-shadow: 2px 2px 5px rgb(4, 40, 245);
+  transition: opacity 0.3s ease;
+}
+.Jokalaria1 .img{
+  width: 100%;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.Jokalaria1:hover .info {
+    top: 70%;
+    transition: 0.5s ease;
+  opacity: 0.5;
+}
+.Jokalaria1:hover img {
+  filter: brightness(80%);
+}
+
+/* Hay que hacer lo mismo para todos los jugadores*/
+
+
+.Jokalaria2 { 
+  position:relative; 
+  display: inline-block;
+}
+
+.Jokalaria2 .info{ 
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  opacity: 4;
+  text-shadow: 2px 2px 5px rgb(4, 40, 245);
+
+  transition: opacity 0.3s ease;
+}
+.Jokalaria2 .img{
+  width: 100%;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.Jokalaria2:hover .info {
+    top: 70%;
+    transition: 0.5s ease;
+    opacity: 0.5;
+}
+.Jokalaria2:hover img {
+  filter: brightness(80%);
+}
+h1{
+  text-align: center;
+  color: var(--bg-color);
+}

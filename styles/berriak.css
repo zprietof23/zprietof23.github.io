@@ -1,0 +1,76 @@
+
+:root {
+    /* Koloreak Dark Moderako eta zure eskakizunetarako egokitu dira */
+    --primary-color: #b9b9b9; /* Goiburua/Orri-oina (Gris argiagoa) */
+    --secondary-color: #0fa541; /* Berde distiratsua (Akzentua/Botoiak) */
+    --text-color: #ffffff; /* Testuaren kolorea argia */
+    --light-color: #414141; /* Elementu argien atzealdea (Gris iluna) */
+    --bg-color: #212121; /* Orriaren atzealde nagusia iluna */
+}
+
+.berriak{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+}
+
+.notizia-handia{
+    border: 1px solid #ddd;
+    padding: 20px;
+    display: flex;           /* Activamos flexbox */
+    align-items: flex-start; /* Alinea el contenido al inicio verticalmente */
+    gap: 20px;
+    justify-content: center;
+}
+
+.notizia-txikiak{
+    border: 1px solid #ddd;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.item{
+    display: flex;
+    gap: 15px;
+}
+
+.img2{
+justify-content: center;
+text-align: center;
+background-color: var(--primary-color)
+}
+
+.img3{
+justify-content: center;
+text-align: center;
+background-color: var(--primary-color)
+}
+
+.info h3{
+    margin: 0 0 6px;
+    font-size: 20px;
+}
+
+
+.fecha{
+    font-size: 17px;
+    color: #777;
+    display: block;
+}
+
+.berria1 img {
+    width: 450px;            
+    height: 450px;
+    
+}
+
+.info1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    height: 450px;
+    font-size: 20px;
+    text-align: center;
+}
