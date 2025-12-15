@@ -1,14 +1,27 @@
 :root {
-    /* Koloreak Dark Moderako eta zure eskakizunetarako egokitu dira */
-    --primary-color: #b9b9b9; /* Goiburua/Orri-oina (Gris argiagoa) */
-    --secondary-color: #0fa541; /* Berde distiratsua (Akzentua/Botoiak) */
-    --text-color: #ffffff; /* Testuaren kolorea argia */
-    --light-color: #414141; /* Elementu argien atzealdea (Gris iluna) */
-    --bg-color: #212121; /* Orriaren atzealde nagusia iluna */
+    /* Usar variables para mantener la consistencia con css.css */
+    --secondary-color: #00ff88;
+    --text-color: #e0e0e0; 
+    --light-color: rgba(65, 65, 65, 0.6);
+    --border-radius: 12px;
 }
+
 .sarrera {
     display: grid;
-    gap: 2px;
+    grid-template-columns: 1fr 1fr; /* 2 zutabeko diseinua */
+    gap: 20px; /* Tarte handiagoa */
+    padding: 20px 0; /* Padding nav-etik */
+}
+
+.div1, .videoa {
+    /* LIQUID GLASS + BORDES REDONDEADOS */
+    padding: 20px;
+    border-radius: var(--border-radius);
+    background-color: var(--light-color); /* Liquid Glass Base */
+    backdrop-filter: blur(5px); 
+    -webkit-backdrop-filter: blur(5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(0, 255, 136, 0.1);
 }
 
 .div1 { 
@@ -18,7 +31,26 @@
     
 .videoa {
     grid-column-start: 2;
+    min-height: 300px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Hau erabili beharko litzateke bideoa kargatzen ez bada */
 }
+
 h2{ 
-    color: chocolate;
+    color: var(--secondary-color); /* Akzentu kolorea */
+    text-shadow: 0 0 5px rgba(0, 255, 136, 0.5);
+}
+
+/* Mugikorreko egokitzapena */
+@media (max-width: 768px) {
+    .sarrera {
+        grid-template-columns: 1fr; /* Zutabe bakarra mugikorrean */
+        gap: 15px;
+    }
+    .div1, .videoa {
+        grid-column-start: 1 !important;
+        grid-row-start: auto !important;
+    }
 }

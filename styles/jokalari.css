@@ -1,125 +1,90 @@
 :root {
   /* Koloreak Dark Moderako eta zure eskakizunetarako egokitu dira */
-  --primary-color: #b9b9b9; /* Goiburua/Orri-oina (Gris argiagoa) */
-  --secondary-color: #0fa541; /* Berde distiratsua (Akzentua/Botoiak) */
-  --text-color: #ffffff; /* Testuaren kolorea argia */
-  --light-color: #414141; /* Elementu argien atzealdea (Gris iluna) */
-  --bg-color: #212121; /* Orriaren atzealde nagusia iluna */
+  --primary-color: #b9b9b9;
+  --secondary-color: #00ff88; /* Berde berria */
+  --text-color: #ffffff;
+  --light-color: #414141;
+  --bg-color: #121212; /* Atzealde ilun berria */
+  --border-radius: 12px;
 }
 /* Goiburua eta Nabigazioa */
 nav a {
-    color: var(--bg-color);
+    color: var(--text-color);
     padding: 10px 15px;
     display: block;
+    border-radius: var(--border-radius);
 }
 
 nav a:hover {
-    background-color: #333333;
+    background-color: rgba(0, 255, 136, 0.1);
     color: var(--secondary-color);
 }
 
-.HurrengoTaldea {
-    color: var(--bg-color);
+.HurrengoTaldea, .AtzekoTaldea {
+    color: var(--text-color);
     padding: 10px 15px;
     display: block;
     list-style: none;
     text-decoration: none;
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.HurrengoTaldea:hover {
-    background-color: #333333;
+.HurrengoTaldea:hover, .AtzekoTaldea:hover {
+    background-color: rgba(0, 255, 136, 0.1);
     color: var(--secondary-color);
-    list-style: none;
-    
-} 
-
-.AtzekoTaldea{ 
-   color: var(--bg-color);
-    padding: 10px 15px;
-    display: block;
-    list-style: none;
-    text-decoration: none;
-}
-
-.AtzekoTaldea:hover{ 
-    background-color: #333333;
-    color: var(--secondary-color);
-    list-style: none;
 }
 
 .Jokalariak {
     display: flex;
     justify-content: center;
-    gap: 180px;
-   
+    gap: 80px; /* Tartea murrizten da zentratuago egoteko */
+    padding-top: 50px;
 }
 
-.Jokalaria1 { 
+.Jokalaria1, .Jokalaria2 { 
   position:relative; 
   display: inline-block;
+  overflow: hidden; /* Ertz biribilduak gordetzeko */
+  border-radius: var(--border-radius);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.6);
 }
 
-.Jokalaria1 .info{ 
+.Jokalaria1 .info, .Jokalaria2 .info { 
   position: absolute;
-  top: 80%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 20px;
-  font-weight: bold;
-  opacity: 4;
-  text-shadow: 2px 2px 5px rgb(4, 40, 245);
-  transition: opacity 0.3s ease;
-}
-.Jokalaria1 .img{
+  bottom: 0; /* Beheko aldera zentratu beharrean */
+  left: 0;
   width: 100%;
-  display: block;
-  transition: transform 0.4s ease;
-}
-.Jokalaria1:hover .info {
-    top: 70%;
-    transition: 0.5s ease;
-  opacity: 0.5;
-}
-.Jokalaria1:hover img {
-  filter: brightness(80%);
-}
-
-/* Hay que hacer lo mismo para todos los jugadores*/
-
-
-.Jokalaria2 { 
-  position:relative; 
-  display: inline-block;
-}
-
-.Jokalaria2 .info{ 
-  position: absolute;
-  top: 80%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.5); /* Atzealde erdi-gardena */
+  backdrop-filter: blur(5px); /* LIQUID GLASS EFECTUA */
+  padding: 15px 0;
   color: white;
-  font-size: 20px;
-  font-weight: bold;
-  opacity: 4;
-  text-shadow: 2px 2px 5px rgb(4, 40, 245);
-
-  transition: opacity 0.3s ease;
-}
-.Jokalaria2 .img{
-  width: 100%;
-  display: block;
-  transition: transform 0.4s ease;
-}
-.Jokalaria2:hover .info {
-    top: 70%;
-    transition: 0.5s ease;
-    opacity: 0.5;
-}
-.Jokalaria2:hover img {
-  filter: brightness(80%);
-}
-h1{
   text-align: center;
-  color: var(--bg-color);
+  font-size: 20px;
+  font-weight: bold;
+  opacity: 1; /* Beti ikusgai */
+  text-shadow: 1px 1px 3px #00ff88;
+  transition: all 0.4s ease;
+}
+.Jokalaria1 .img, .Jokalaria2 .img {
+  width: 100%;
+  display: block;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+/* Hover efektuak aldatu egiten dira txukunagoak izateko */
+.Jokalaria1:hover .info, .Jokalaria2:hover .info {
+    transform: translateY(-5px); /* Altxatu arin */
+    background: rgba(0, 255, 136, 0.2); /* Berde glass efektua */
+    text-shadow: 0 0 10px white;
+}
+.Jokalaria1:hover img, .Jokalaria2:hover img {
+    filter: brightness(100%) saturate(120%); /* Kolore distiratsuagoak */
+    transform: scale(1.05);
+}
+
+h1 {
+  text-align: center;
+  color: var(--secondary-color);
+  text-shadow: 0 0 5px rgba(0, 255, 136, 0.5);
 }

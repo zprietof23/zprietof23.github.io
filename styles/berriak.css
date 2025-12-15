@@ -1,11 +1,9 @@
-
 :root {
-    /* Koloreak Dark Moderako eta zure eskakizunetarako egokitu dira */
-    --primary-color: #b9b9b9; /* Goiburua/Orri-oina (Gris argiagoa) */
-    --secondary-color: #0fa541; /* Berde distiratsua (Akzentua/Botoiak) */
-    --text-color: #ffffff; /* Testuaren kolorea argia */
-    --light-color: #414141; /* Elementu argien atzealdea (Gris iluna) */
-    --bg-color: #212121; /* Orriaren atzealde nagusia iluna */
+    /* Usar variables para mantener la consistencia con css.css */
+    --secondary-color: #00ff88;
+    --text-color: #e0e0e0; 
+    --light-color: rgba(65, 65, 65, 0.6);
+    --border-radius: 12px;
 }
 
 .berriak{
@@ -15,55 +13,76 @@
 }
 
 .notizia-handia{
-    border: 1px solid #ddd;
-    padding: 20px;
-    display: flex;           /* Activamos flexbox */
-    align-items: flex-start; /* Alinea el contenido al inicio verticalmente */
-    gap: 20px;
-    justify-content: center;
+    /* LIQUID GLASS + BORDES REDONDEADOS */
+    background-color: var(--light-color); /* Fondo semi-transparente */
+    border: 1px solid rgba(0, 255, 136, 0.1); /* Borde neón suave */
+    border-radius: var(--border-radius);
+    padding: 25px; 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); 
+    backdrop-filter: blur(8px); /* LIQUID GLASS */
+    -webkit-backdrop-filter: blur(8px);
+    
+    display: flex;           
+    align-items: flex-start;
+    gap: 30px;
+    justify-content: space-between; 
 }
 
 .notizia-txikiak{
-    border: 1px solid #ddd;
+    /* LIQUID GLASS + BORDES REDONDEADOS */
+    background-color: var(--light-color); /* Fondo semi-transparente */
+    border: 1px solid rgba(0, 255, 136, 0.1); /* Borde neón suave */
+    border-radius: var(--border-radius);
     padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); 
+    backdrop-filter: blur(5px); /* LIQUID GLASS */
+    -webkit-backdrop-filter: blur(5px);
+    
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 25px; 
 }
 
 .item{
     display: flex;
     gap: 15px;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.2); /* Separador sutil */
+    padding-bottom: 15px;
 }
 
-.img2{
-justify-content: center;
-text-align: center;
-background-color: var(--primary-color)
+.item:last-child {
+    border-bottom: none; 
+    padding-bottom: 0;
 }
 
-.img3{
+.img2, .img3{
 justify-content: center;
 text-align: center;
-background-color: var(--primary-color)
+background-color: rgba(0, 0, 0, 0.2); /* Fondo más discreto */
+border-radius: 8px; /* Borde más pequeño para las imágenes */
+padding: 5px;
 }
 
 .info h3{
     margin: 0 0 6px;
     font-size: 20px;
+    color: var(--text-color);
 }
 
 
 .fecha{
-    font-size: 17px;
-    color: #777;
+    font-size: 14px; 
+    color: var(--secondary-color); /* Fecha en color neón */
     display: block;
+    margin-top: 5px;
+    font-weight: bold;
 }
 
 .berria1 img {
-    width: 450px;            
+    width: 350px;            
     height: 450px;
-    
+    object-fit: cover;
+    border-radius: 8px; /* BORDES REDONDEADOS para la imagen */
 }
 
 .info1 {
@@ -72,5 +91,35 @@ background-color: var(--primary-color)
     justify-content: center; 
     height: 450px;
     font-size: 20px;
-    text-align: center;
+    text-align: left; /* Alineado a la izquierda para mejor lectura */
+}
+
+.info1 h2 {
+    color: var(--secondary-color); /* Título grande en neón */
+    margin-bottom: 15px;
+    text-shadow: 0 0 5px rgba(0, 255, 136, 0.5);
+}
+
+/* Responsive adaptation for smaller screens */
+@media (max-width: 900px) {
+    .berriak {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+        gap: 20px;
+    }
+    
+    .notizia-handia {
+        flex-direction: column; /* Colocar imagen y texto verticalmente */
+        align-items: center;
+        text-align: center;
+    }
+    .info1 {
+        height: auto;
+        text-align: center;
+        font-size: 18px;
+    }
+    .berria1 img {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+    }
 }
