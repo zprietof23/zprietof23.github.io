@@ -167,6 +167,16 @@ footer {
     border-radius: var(--border-radius);
     box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.5);
 }
+.social-media img {
+    width: 30px;
+    height: 30px;
+    margin: 0 8px;
+    vertical-align: middle;
+}
+.social-media img.youtube {
+    width: 35px;
+    height: 30px;
+}
 
 /* === COOKIE BANNERRA === */
 /* 1. Ezkutatu checkbox-a (HTML-an gehitu behar da) */
