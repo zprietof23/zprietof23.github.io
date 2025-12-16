@@ -18,25 +18,25 @@
 /* Hover efektuak hobetu eta kolore berrietara egokitu */
 .Heretics:hover { 
  transition: box-shadow 0.2s ease, transform 0.2s ease;
- box-shadow: 0 0 15px 3px var(--secondary-color); /* Berde akzentua */
+ box-shadow: 0 0 15px 3px  #ff4444;
  transform: translateY(-5px);
 }
 
 .G2:hover { 
     transition: box-shadow 0.2s ease, transform 0.2s ease;
-    box-shadow: 0 0 15px 3px #ff4444; /* Gorria */
+    box-shadow: 0 0 15px 3px #3b80ff;
     transform: translateY(-5px);
 }
 
 .Faze:hover {
     transition: box-shadow 0.2s ease, transform 0.2s ease;
-    box-shadow: 0 0 15px 3px #ffc107; /* Horia/Laranja (Faze kolorea) */
+    box-shadow: 0 0 15px 3px var(--secondary-color);
     transform: translateY(-5px);
 }
 
 .MadLions:hover { 
     transition: box-shadow 0.2s ease, transform 0.2s ease;
-    box-shadow: 0 0 15px 3px #3b80ff; /* Horia */
+    box-shadow: 0 0 15px 3px #f3e309;
     transform: translateY(-5px);
 }
 
