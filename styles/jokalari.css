@@ -1,12 +1,3 @@
-:root {
-  /* Koloreak Dark Moderako eta zure eskakizunetarako egokitu dira */
-  --primary-color: #b9b9b9;
-  --secondary-color: #00ff88; /* Berde berria */
-  --text-color: #ffffff;
-  --light-color: #414141;
-  --bg-color: #121212; /* Atzealde ilun berria */
-  --border-radius: 12px;
-}
 /* Goiburua eta Nabigazioa */
 nav a {
     color: var(--text-color);
@@ -45,24 +36,24 @@ nav a:hover {
 .Jokalaria1, .Jokalaria2 { 
   position:relative; 
   display: inline-block;
-  overflow: hidden; /* Ertz biribilduak gordetzeko */
+  overflow: hidden;
   border-radius: var(--border-radius);
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.6);
 }
 
 .Jokalaria1 .info, .Jokalaria2 .info { 
   position: absolute;
-  bottom: 0; /* Beheko aldera zentratu beharrean */
+  bottom: 0;
   left: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Atzealde erdi-gardena */
-  backdrop-filter: blur(5px); /* LIQUID GLASS EFECTUA */
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
   padding: 15px 0;
   color: white;
   text-align: center;
   font-size: 20px;
   font-weight: bold;
-  opacity: 1; /* Beti ikusgai */
+  opacity: 1;
   text-shadow: 1px 1px 3px #00ff88;
   transition: all 0.4s ease;
 }
@@ -74,12 +65,12 @@ nav a:hover {
 
 /* Hover efektuak aldatu egiten dira txukunagoak izateko */
 .Jokalaria1:hover .info, .Jokalaria2:hover .info {
-    transform: translateY(-5px); /* Altxatu arin */
-    background: rgba(0, 255, 136, 0.2); /* Berde glass efektua */
+    transform: translateY(-5px);
+    background: rgba(0, 255, 136, 0.2);
     text-shadow: 0 0 10px white;
 }
 .Jokalaria1:hover img, .Jokalaria2:hover img {
-    filter: brightness(100%) saturate(120%); /* Kolore distiratsuagoak */
+    filter: brightness(100%) saturate(120%);
     transform: scale(1.05);
 }
 
@@ -87,4 +78,17 @@ h1 {
   text-align: center;
   color: var(--secondary-color);
   text-shadow: 0 0 5px rgba(0, 255, 136, 0.5);
+}
+/* Responsive diseinua */
+@media (max-width: 768px) {
+    .Jokalariak {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        padding: 20px;
+    }
+    .Jokalaria1, .Jokalaria2 {
+        width: 100%;
+        max-width: 300px;
+    }
 }

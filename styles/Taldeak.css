@@ -1,21 +1,11 @@
-:root {
-    /* Koloreak Dark Moderako eta zure eskakizunetarako egokitu dira */
-    --primary-color: #b9b9b9;
-    --secondary-color: #00ff88;
-    --text-color: #ffffff;
-    --light-color: #414141;
-    --bg-color: #121212;
-    --border-radius: 12px;
-}
-
-/* Talde guztiak: Estilo komunak (beharrezkoa balitz) */
+/* Talde guztiak: Estilo komunak*/
 .Heretics, .G2, .Faze, .MadLions {
     border-radius: var(--border-radius); /* Ertz biribilduak */
     padding: 10px;
     background-color: rgba(45, 45, 45, 0.5);
 }
 
-/* Hover efektuak hobetu eta kolore berrietara egokitu */
+/* Hover efektuak*/
 .Heretics:hover { 
  transition: box-shadow 0.2s ease, transform 0.2s ease;
  box-shadow: 0 0 15px 3px  #ff4444;
@@ -42,7 +32,7 @@
 
 .Taldeak {
     display: grid;
-    gap: 30px; /* Tartea handiagoa, itxura garbiagoa */
+    gap: 30px;
     grid-template-columns: 1fr 1fr;
     max-width: 800px;
     margin: 50px auto;
@@ -70,4 +60,16 @@
     text-align: center;
     grid-column-start: 2;
     grid-row-start: 2;
+}
+/*Responsive diseinua*/
+@media (max-width: 600px) {
+    .Taldeak {
+        grid-template-columns: 1fr;
+        max-width: 90%;
+        margin: 20px auto;
+    }
+    .Heretics, .G2, .Faze, .MadLions {
+        grid-column: auto !important;
+        grid-row: auto !important;
+    }
 }
