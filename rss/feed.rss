@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>GameStop</title>
     <link>https://zprietof23.github.io</link>
     <description>GameStop-eko azken berriak.</description>
     <language>eu</language>
+    <atom:link href="https://zprietof23.github.io/rss/feed.rss" rel="self" type="application/rss+xml" />
     <item>
       <title>RSS feeda</title>
       <link>https://zprietof23.github.io</link>
@@ -33,7 +34,7 @@
       <title>Faze Klan-ek irabazi du!!!</title>
       <link>https://zprietof23.github.io/pages/clasifikazioa.html</link>
       <description>Faze Klan-ek irabazi dio heretics-eri</description>
-      <pubDate>Sun, 21 Dec 2026 19:35:25 +0100</pubDate>
+      <pubDate>Sun, 21 Dec 2025 19:35:25 +0100</pubDate>
     </item>
     <item>
       <title>Urte berri on!!!</title>
